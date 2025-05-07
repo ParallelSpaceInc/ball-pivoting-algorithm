@@ -4,10 +4,10 @@ project(bpa)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_compile_options(-fsanitize=address)
-add_link_options(-fsanitize=address)
-
-
 file(GLOB_RECURSE SOURCE src/*)
 
-add_executable(BPA ${SOURCE})
+add_library(bpa STATIC ${SOURCE})
+
+target_include_directories(bpa PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+)
