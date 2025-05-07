@@ -9,7 +9,7 @@
 #include <set>
 #include <iostream>
 #include <map>
-#include <unistd.h>
+#include <algorithm>
 
 #define _USE_MATH_DEFINES
 

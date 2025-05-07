@@ -10,6 +10,11 @@
 #include <cassert>
 #include <cmath>
 #include <iostream>
+#include <algorithm>
+
+#ifndef M_1_PI
+#define M_1_PI 0.31830988618379067154
+#endif
 
 void Normals::provideNormalsDeviation(Vertices &vertices, const std::vector<Triangle> &faces) {
     std::vector<std::vector<size_t>> faceIndiceesForVertex;
