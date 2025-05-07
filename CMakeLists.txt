@@ -11,3 +11,5 @@ add_library(bpa STATIC ${SOURCE})
 target_include_directories(bpa PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
+
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
