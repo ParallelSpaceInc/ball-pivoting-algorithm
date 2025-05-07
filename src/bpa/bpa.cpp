@@ -30,6 +30,10 @@ BPA::Result BPA::run() {
     result.faces = convertToVector(faces);
     result.numOfUsedVertices = usedVertices.size();
     result.multiRollingOccured = multiRollingOccured;
+
+    for (VertexIndex idx : usedVertices) {
+        result.vertices_idx.push_back(vertices[idx]);
+    }
     return result;
 }
 

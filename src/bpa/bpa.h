@@ -48,6 +48,7 @@ class BPA {
     public:
         struct Result {
             std::vector<Triangle> faces;
+            std::vector<Vertex> vertices_idx;
             size_t numOfUsedVertices;
             bool multiRollingOccured;
         };
