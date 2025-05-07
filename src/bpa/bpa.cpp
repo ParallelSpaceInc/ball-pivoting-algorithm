@@ -215,7 +215,7 @@ BPA::PivotResult BPA::ballPivot(const Edge edge, const Vertex ballPosition, cons
     std::vector<VertexIndex> newVertexIndicees;
     double maxDotProduct = correspVertexIndex.has_value() ? calcStartingScalarProduct(e_i, e_j, vertices[correspVertexIndex.value()], b, r_c) : -r_c_sq;
     DBOUT << "starting dot product: " << maxDotProduct / r_c_sq << std::endl;
-    std::optional<Vertex> newBallPosition;
+    Vertex newBallPosition = {0.0, 0.0, 0.0};
     Circle circle = {};
     circle.center = m;
     circle.radius = r_c;
